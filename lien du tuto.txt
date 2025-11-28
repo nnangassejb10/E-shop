@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=5xAZFU0_gas&list=PPSV
+
+
+tutoriel du code du chat:
+https://www.youtube.com/watch?v=eDz0nmQM3xw
+
+je dois faire le templates de l'adminLTE, sur le champs de chose. 
+Prendre le le coté le backend et frontend, le partie de administration.
+le profolio ne doit pas comporter plusieurs couleur.

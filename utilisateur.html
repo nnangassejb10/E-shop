@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Compte | E-shop</title>
+  <link rel="stylesheet" href="img/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #f63e4e;
+      --background: #ffffff;
+      --text: #000000;
+      --container-bg: #f5f5f5;
+      --footer-bg: #0c296466;
+      --navbar-bg: #000000; /* ✅ ajout variable pour la barre noire */
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #f63e4e;
+        --background: #121212;
+        --text: #f0f0f0;
+        --container-bg: #1e1e1e;
+        --footer-bg: #0c2964a9;
+        --navbar-bg: #000000; /* barre toujours noire en mode sombre aussi */
+      }
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--background);
+      color: var(--text);
+      transition: background 0.6s ease, color 0.6s ease;
+    }
+
+    /* ✅ Barre de navigation noire */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--navbar-bg);
+      color: white;
+      padding: 10px 30px;
+      transition: background 0.6s ease;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .menu li a:hover {
+      color: var(--primary);
+    }
+
+    .user-container {
+      width: 400px;
+      margin: 60px auto;
+      background: var(--container-bg);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 0.6s ease-in-out;
+      transition: background 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .user-container h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .input-container {
+      position: relative;
+    }
+
+    .user-container input {
+      width: 100%;
+      padding: 10px 35px 10px 10px;
+      margin: 10px 0;
+      border: none;
+      border-bottom: 2px solid var(--primary);
+      outline: none;
+      background: transparent;
+      font-size: 16px;
+      color: var(--text);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .user-container input:focus {
+      border-color: #000;
+      box-shadow: 0 2px 4px rgba(246, 62, 78, 0.3);
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #777;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .toggle-password:hover {
+      color: var(--primary);
+      transform: scale(1.2);
+    }
+
+    .user-container button {
+      width: 100%;
+      padding: 12px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.4s ease, transform 0.2s ease;
+    }
+
+    .user-container button:hover {
+      background: #000;
+      transform: translateY(-2px);
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .switch a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .switch a:hover {
+      color: #000;
+    }
+
+    footer {
+      background: var(--footer-bg);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: auto;
+      transition: background 0.6s ease;
+    }
+
+    footer:hover {
+      background: #0c2964a9;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><h1>E-shop</h1></div>
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="solde.html">Solde</a></li>
+      <li><a href="utilisateur.html" class="active fa-solid fa-user"></a></li>
+      <li><a href="panier.html" class="fas fa-shopping-cart"></a></li>
+    </ul>
+  </nav>
+
+  <div class="user-container">
+    <h2>Connexion</h2>
+    <form>
+      <input type="text" placeholder="Nom d’utilisateur ou Email" required>
+      <div class="input-container">
+        <input type="password" id="password" placeholder="Mot de passe" required>
+        <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+      </div>
+      <button type="submit">Se connecter</button>
+    </form>
+    <div class="switch">
+      <p>Pas encore de compte ? <a href="#">Créer un compte</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Réalisé par : <a href="#">Gloire JB NNANG</a> — © 2025 E-shop</p>
+  </footer>
+
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      togglePassword.classList.toggle('fa-eye-slash');
+      togglePassword.style.transform = 'scale(1.3)';
+      setTimeout(() => togglePassword.style.transform = 'scale(1)', 150);
+    });
+  </script>
+</body>
+</html>

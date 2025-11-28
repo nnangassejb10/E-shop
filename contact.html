@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | E-shop</title>
+
+  <!-- Lien CSS principal -->
+  <link rel="stylesheet" href="img/css/contact.css">
+
+  <!-- Polices Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><h1>E-shop</h1></div>
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="solde.html">Solde</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="utilisateur.html" class="fa-solid fa-user"></a></li>
+      <li><a href="panier.html" class="fas fa-shopping-cart"></a></li>
+    </ul>
+  </nav>
+
+  <!-- SECTION CONTACT -->
+  <section class="contact-section">
+    <h1>Contactez-nous</h1>
+    <p>Une question ? Un besoin particulier ? Laissez-nous un message, nous vous répondrons rapidement.</p>
+
+    <div class="contact-container">
+      <!-- FORMULAIRE -->
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresse e-mail</label>
+          <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Votre message..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Envoyer</button>
+      </form>
+
+      <!-- INFOS DE CONTACT + GPS -->
+      <div class="contact-info">
+        <h3><i class="fa-solid fa-address-book"></i> Nos coordonnées</h3>
+        <p><strong>Adresse :</strong> Nzeng-Ayong, Libreville, Gabon</p>
+        <p><strong>Téléphone :</strong> +241 06 00 00 00</p>
+        <p><strong>Email :</strong> contact@eshop-gabon.com</p>
+
+        <h3><i class="fa-solid fa-clock"></i> Horaires</h3>
+        <p>Lundi - Vendredi : 08h00 à 18h00</p>
+        <p>Samedi : 09h00 à 13h00</p>
+
+        <!-- Carte GPS -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=Nzeng%20Ayong%20Libreville%20Gabon&output=embed"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Réalisée par : <a href="#">Gloire JB NNANG</a> — © 2025 E-shop</p>
+  </footer>
+
+</body>
+</html>

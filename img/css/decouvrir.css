@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar .logo h1 {
+    color: white;
+    cursor: pointer;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar .menu li .active,
+.navbar .menu li a:hover {
+    border-bottom: 4px solid #f63e4e;
+}
+
+/* ===== SECTION DECOUVRIR ===== */
+.decouvrir-section {
+    text-align: center;
+    padding: 60px 5%;
+    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+}
+
+.decouvrir-section h1 {
+    font-size: 36px;
+    color: #222;
+}
+
+.decouvrir-section p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+}
+
+/* ===== GRILLE D’ACCESSOIRES ===== */
+.accessoires-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.accessoire {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accessoire img {
+    width: 100%;
+    border-radius: 10px;
+    height: 220px;    
+    object-fit: contain; /* 🔁 change "cover" → "contain" */
+     /* optionnel : une couleur de fond neutre si l’image ne remplit pas tout */
+}
+
+
+.accessoire .img img {
+    transition: transform 0.4s ease; /* effet fluide */
+}
+
+.accessoire:hover .img:hover img {
+    transform: scale(1.8); /* zoom de 10% */
+}
+
+.accessoire h3 {
+    margin-top: 15px;
+    color: #424144;
+}
+
+.accessoire p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    min-height: 40px;
+}
+
+.accessoire span {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f63e4e;
+}
+
+.accessoire:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+    background: #55575c;
+    height: 10vh;
+    margin-top: 50px;
+    
+}
+
+footer p {
+    text-align: center;
+    line-height: 10vh;
+    color: #f9f7f7;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #f63e4e;
+    font-weight: bold;
+}
